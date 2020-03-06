@@ -35,5 +35,12 @@ namespace WordCounter.Models.Tests
       Assert.AreEqual(true, newCounter.IsValidInput());
     }
 
+    [TestMethod]
+    public void InstancesOfWordInSentence_CorrectlyReturnsInstancesOfWordInSentence_1()
+    {
+      RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat");
+      Assert.AreEqual(1, newCounter.InstancesOfWordInSentence());
+    }
+
   }
 }

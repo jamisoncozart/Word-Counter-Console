@@ -17,6 +17,11 @@ namespace WordCounter.Models
     {
       return !(SearchWord.Any(char.IsDigit) || Sentence.Any(char.IsDigit));
     }
+
+    public int InstancesOfWordInSentence()
+    {
+      return -1;
+    }
   }
 
 }
