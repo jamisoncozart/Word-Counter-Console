@@ -7,7 +7,7 @@ namespace WordCounter.Models
     public string SearchWord { get; set; }
     public RepeatCounter(string word, string sentence)
     {
-      //code
+      SearchWord = word;
     }
   }
 
