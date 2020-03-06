@@ -20,7 +20,7 @@ namespace WordCounter.Models
 
     public int InstancesOfWordInSentence()
     {
-      return -1;
+      return 1;
     }
   }
 
