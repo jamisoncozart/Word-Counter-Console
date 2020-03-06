@@ -63,5 +63,12 @@ namespace WordCounter.Models.Tests
       Assert.AreEqual(2, newCounter.InstancesOfWordInSentence());
     }
 
+    [TestMethod]
+    public void InstancesOfWordInSentence_WordCountAgnosticToPunctuation_3()
+    {
+      RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat, He is a fat !cat; I love my fat cat.");
+      Assert.AreEqual(3, newCounter.InstancesOfWordInSentence());
+    }
+
   }
 }
