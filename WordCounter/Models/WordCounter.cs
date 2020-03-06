@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace WordCounter.Models
 {
@@ -14,7 +15,14 @@ namespace WordCounter.Models
     
     public bool IsValidateInput()
     {
-      return false;
+      if(SearchWord.Any(char.IsDigit) || Sentence.Any(char.IsDigit))
+      {
+        return false;
+      }
+      else
+      {
+        return true;
+      }
     }
   }
 
