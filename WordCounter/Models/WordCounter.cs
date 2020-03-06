@@ -1,12 +1,13 @@
 using System;
 
-namespace WordCounter.Models.Models
+namespace WordCounter.Models
 {
-  class Test
+  public class RepeatCounter
   {
-    public static void Temp()
+    public string SearchWord { get; set; }
+    public RepeatCounter(string word, string sentence)
     {
-
+      //code
     }
   }
 

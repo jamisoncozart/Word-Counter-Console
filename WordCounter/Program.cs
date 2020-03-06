@@ -1,5 +1,5 @@
 using System;
-using WordCounter.Models.Models;
+using WordCounter.Models;
 
 namespace WordCounter.Models
 {

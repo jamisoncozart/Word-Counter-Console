@@ -1,16 +1,17 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WordCounter.Models.Models;
+using WordCounter.Models;
 using System;
 
 namespace WordCounter.Models.Tests
 {
   [TestClass]
-  public class MakeFilesTests
+  public class RepeatCounterTests
   {
     [TestMethod]
-    public void MethodName_WhatItDoes_ReturnObject()
+    public void RepeatCounter_CreatesNewInstanceOfWordCounterWithCorrectSearchWord_cat()
     {
-
+      RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat");
+      Assert.AreEqual("cat", newCounter.SearchWord);
     }
 
   }
