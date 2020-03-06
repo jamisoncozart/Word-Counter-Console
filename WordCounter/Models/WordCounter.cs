@@ -14,7 +14,7 @@ namespace WordCounter.Models
     
     public bool IsValidateInput()
     {
-      return true;
+      return false;
     }
   }
 
