@@ -49,5 +49,12 @@ namespace WordCounter.Models.Tests
       Assert.AreEqual(3, newCounter.InstancesOfWordInSentence());
     }
 
+    [TestMethod]
+    public void InstancesOfWordInSentence_DoesNotCountInstancesOfWordWithinOtherWords_1()
+    {
+      RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat cathedral");
+      Assert.AreEqual(1, newCounter.InstancesOfWordInSentence());
+    }
+
   }
 }
