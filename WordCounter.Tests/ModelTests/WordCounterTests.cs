@@ -56,5 +56,12 @@ namespace WordCounter.Models.Tests
       Assert.AreEqual(1, newCounter.InstancesOfWordInSentence());
     }
 
+    [TestMethod]
+    public void InstancesOfWordInSentence_WordCountAgnosticToCapitalAndLowercase_2()
+    {
+      RepeatCounter newCounter = new RepeatCounter("cat", "This is my CAT cat");
+      Assert.AreEqual(2, newCounter.InstancesOfWordInSentence());
+    }
+
   }
 }
