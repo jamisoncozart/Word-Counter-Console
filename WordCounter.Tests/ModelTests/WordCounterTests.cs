@@ -45,7 +45,7 @@ namespace WordCounter.Models.Tests
     [TestMethod]
     public void InstancesOfWordInSentence_CorrectlyReturnsInstancesOfWordInSentence_3()
     {
-      RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat, I love my cat, my cat is fluffy.");
+      RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat I love my cat my cat is fluffy.");
       Assert.AreEqual(3, newCounter.InstancesOfWordInSentence());
     }
 

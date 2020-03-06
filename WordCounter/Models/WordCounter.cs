@@ -20,7 +20,11 @@ namespace WordCounter.Models
 
     public int InstancesOfWordInSentence()
     {
-      return 1;
+      string[] words = Sentence.Split(' ');
+      var wordMatches = from word in words
+                        where word == SearchWord
+                        select word;
+      return wordMatches.Count();
     }
   }
 
