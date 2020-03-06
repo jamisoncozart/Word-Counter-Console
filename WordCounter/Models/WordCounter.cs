@@ -13,16 +13,9 @@ namespace WordCounter.Models
       Sentence = sentence;
     }
     
-    public bool IsValidateInput()
+    public bool IsValidInput()
     {
-      if(SearchWord.Any(char.IsDigit) || Sentence.Any(char.IsDigit))
-      {
-        return false;
-      }
-      else
-      {
-        return true;
-      }
+      return !(SearchWord.Any(char.IsDigit) || Sentence.Any(char.IsDigit));
     }
   }
 

@@ -25,14 +25,14 @@ namespace WordCounter.Models.Tests
     public void IsValidateInput_CorrectlyReturnsFalseWhenNumbersArePresentInUserInput_false()
     {
       RepeatCounter newCounter = new RepeatCounter("cat1", "This is my cat");
-      Assert.AreEqual(false, newCounter.IsValidateInput());
+      Assert.AreEqual(false, newCounter.IsValidInput());
     }
 
     [TestMethod]
-    public void IsValidateInput_CorrectlyReturnsTrueWhenNumbersArePresentInUserInput_true()
+    public void IsValidInput_CorrectlyReturnsTrueWhenNumbersArePresentInUserInput_true()
     {
       RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat");
-      Assert.AreEqual(true, newCounter.IsValidateInput());
+      Assert.AreEqual(true, newCounter.IsValidInput());
     }
 
   }
