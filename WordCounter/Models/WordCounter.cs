@@ -22,7 +22,7 @@ namespace WordCounter.Models
     {
       string[] words = Sentence.Split(' ');
       var wordMatches = from word in words
-                        where word == SearchWord
+                        where word.ToLower() == SearchWord.ToLower()
                         select word;
       return wordMatches.Count();
     }
