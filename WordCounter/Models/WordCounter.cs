@@ -20,7 +20,7 @@ namespace WordCounter.Models
 
     public int InstancesOfWordInSentence()
     {
-      string[] words = Sentence.Split(' ');
+      string[] words = Sentence.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',' });
       var wordMatches = from word in words
                         where word.ToLower() == SearchWord.ToLower()
                         select word;
