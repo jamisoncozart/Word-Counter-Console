@@ -11,6 +11,11 @@ namespace WordCounter.Models
       SearchWord = word;
       Sentence = sentence;
     }
+    
+    public bool IsValidateInput()
+    {
+      return true;
+    }
   }
 
 }

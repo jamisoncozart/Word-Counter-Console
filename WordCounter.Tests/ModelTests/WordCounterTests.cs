@@ -19,6 +19,11 @@ namespace WordCounter.Models.Tests
       RepeatCounter newCounter = new RepeatCounter("cat", "This is my cat");
       Assert.AreEqual("This is my cat", newCounter.Sentence);
     }
-
+    [TestMethod]
+    public void IsValidateInput_CorrectlyThrowsErrorWhenNumbersArePresentInUserInput_Error()
+    {
+      RepeatCounter newCounter = new RepeatCounter("cat1", "This is my cat");
+      Assert.AreEqual(false, newCounter.IsValidateInput());
+    }
   }
 }
