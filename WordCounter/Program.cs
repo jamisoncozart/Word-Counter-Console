@@ -1,4 +1,3 @@
-using System;
 using WordCounter.Models;
 using System.Threading;
 using System.Drawing;
@@ -8,8 +7,18 @@ public class Program
 {
   public static void Main()
   {
-    Console.Clear();
-    ValidateInputLoop();
+    bool repeat = true;
+    while(repeat)
+    {
+      Console.Clear();
+      ValidateInputLoop();
+      RollText("Would you like to try another word/sentence combo? (y/n)\n");
+      string playAgain = Console.ReadLine();
+      if(playAgain == "n")
+      {
+        repeat = false;
+      }
+    }
   }
   
   public static void ValidateInputLoop()
@@ -28,6 +37,7 @@ public class Program
       {
         int instancesOfWord = newCounter.InstancesOfWordInSentence();
         RollText($"'{searchWord}' is found {instancesOfWord} times in '{searchSentence}'");
+        Console.WriteLine("\n");
         valid = true;
       }
       else
